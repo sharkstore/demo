@@ -8,22 +8,19 @@ namespace fbase {
 namespace dataserver {
 namespace net {
 
-class ConnectionManager;
-
 class Connection : public std::enable_shared_from_this<Connection> {
 public:
-    Connection(ConnectionManager& manger, asio::io_context& conext, asio::ip::tcp::socket socket);
+    Connection(asio::io_context& conext, asio::ip::tcp::socket socket);
     ~Connection();
 
     Connection(const Connection&) = delete;
     Connection& operator=(const Connection&) = delete;
 
 private:
-    ConnectionManger& manager;
     asio::io_context& io_context_;
     asio::ip::tcp::socket socket_;
 
-    std::array<char, 8192> buffer_;
+    std::array<uint8_t, 8192> buffer_;
 };
 
 } /* net */ 

@@ -1,19 +1,41 @@
 #ifndef FBASE_DATASERVER_NET_SERVER_H_
 #define FBASE_DATASERVER_NET_SERVER_H_
 
+#include <thread>
+#include <asio/io_context.hpp>
+#include <asio/ip/tcp.hpp>
+
 namespace fbase {
 namespace dataserver {
 namespace net {
 
+class Handler;
+
 class Server final {
 public:
-    Server() {}
+    explicit Server(const ServerOption& opt);
     ~Server() {}
 
     Server(const Server&) = delete;
     Server& operator=(const Server&) = delete;
 
+    void ListenAndServe(const std::string& listen_ip, uint16_t port, Handler* handler);
+    void Stop();
+
 private:
+   void do_accept();
+
+private:
+    const ServerOption opt_;
+
+    Handler *handler_ = nullptr;
+
+    // acceptor
+    asio::io_context context_;
+    asio::ip::tcp::acceptor acceptor_;
+    std::unique_ptr<std::thread> thr_;
+
+    //
 };
 
 }  // namespace net

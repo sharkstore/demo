@@ -20,8 +20,12 @@ set(CXX_FLAGS
 string(REPLACE ";" " " CMAKE_CXX_FLAGS "${CXX_FLAGS}") 
 
 set(demo_SRCS
+    net/connection.cpp
     net/main.cpp
-    net/acceptor.cpp
+    net/server.cpp
+    net/context_pool.cpp
+    net/protocol_telnet.cpp
+    net/protocol_rpc.cpp
     )
 
 set(dep_LIBS
