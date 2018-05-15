@@ -1,5 +1,4 @@
-#ifndef FBASE_DATASERVER_NET_SERVER_OPT_H_
-#define FBASE_DATASERVER_NET_SERVER_OPT_H_
+_Pragma("once");
 
 namespace fbase {
 namespace dataserver {
@@ -31,5 +30,3 @@ struct ServerOption {
 }  // namespace net
 }  // namespace dataserver
 }  // namespace fbase
-
-#endif /* end of include guard: FBASE_DATASERVER_NET_SERVER_OPT_H_ */

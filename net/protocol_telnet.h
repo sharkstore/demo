@@ -1,5 +1,4 @@
-#ifndef FBASE_DATASREVER_NET_PROTOCOL_TELNET_H_
-#define FBASE_DATASREVER_NET_PROTOCOL_TELNET_H_
+_Pragma("once");
 
 namespace fbase {
 namespace dataserver {
@@ -17,7 +16,3 @@ public:
 }  // namespace net
 }  // namespace dataserver
 }  // namespace fbase
-
-
-#endif /* end of include guard: FBASE_DATASREVER_NET_PROTOCOL_TELNET_H_ */
-

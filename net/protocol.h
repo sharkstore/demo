@@ -1,6 +1,4 @@
-#ifndef FBASE_DATASERVER_NET_PROTOCOL_H_
-#define FBASE_DATASERVER_NET_PROTOCOL_H_
-
+_Pragma("once");
 
 namespace fbase {
 namespace dataserver {
@@ -18,11 +16,6 @@ public:
     virtual void OnDataArrived(const uint8_t* buf, size_t len) = 0;
 };
 
-
 }  // namespace net
 }  // namespace dataserver
 }  // namespace fbase
-
-
-
-#endif /* end of include guard: FBASE_DATASERVER_NET_PROTOCOL_H_ */

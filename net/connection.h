@@ -1,8 +1,7 @@
-#ifndef FBASE_DATASERVER_NET_CONNECTION_H_
-#define FBASE_DATASERVER_NET_CONNECTION_H_
+_Pragma("once");
 
-#include <memory>
 #include <asio/ip/tcp.hpp>
+#include <memory>
 
 namespace fbase {
 namespace dataserver {
@@ -23,10 +22,6 @@ private:
     std::array<uint8_t, 8192> buffer_;
 };
 
-} /* net */ 
-} /* dataserver  */ 
-} /* fbase  */ 
-
-
-
-#endif /* end of include guard: FBASE_DATASERVER_NET_CONNECTION_H_ */
+}  // namespace net
+}  // namespace dataserver
+}  // namespace fbase

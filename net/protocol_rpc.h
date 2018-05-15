@@ -1,5 +1,4 @@
-#ifndef FBASE_DATASERVER_NET_PROTOCOL_RPC_H_
-#define FBASE_DATASERVER_NET_PROTOCOL_RPC_H_
+_Pragma("once");
 
 namespace fbase {
 namespace dataserver {
@@ -22,6 +21,3 @@ private:
 }  // namespace net
 }  // namespace dataserver
 }  // namespace fbase
-
-
-#endif /* end of include guard: FBASE_DATASERVER_NET_PROTOCOL_RPC_H_ */

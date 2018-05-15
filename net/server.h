@@ -1,9 +1,8 @@
-#ifndef FBASE_DATASERVER_NET_SERVER_H_
-#define FBASE_DATASERVER_NET_SERVER_H_
+_Pragma("once");
 
-#include <thread>
 #include <asio/io_context.hpp>
 #include <asio/ip/tcp.hpp>
+#include <thread>
 
 namespace fbase {
 namespace dataserver {
@@ -23,12 +22,12 @@ public:
     void Stop();
 
 private:
-   void do_accept();
+    void do_accept();
 
 private:
     const ServerOption opt_;
 
-    Handler *handler_ = nullptr;
+    Handler* handler_ = nullptr;
 
     // acceptor
     asio::io_context context_;
@@ -41,5 +40,3 @@ private:
 }  // namespace net
 }  // namespace dataserver
 }  // namespace fbase
-
-#endif /* end of include guard: FBASE_DATASERVER_NET_SERVER_H_ */
